@@ -6,3 +6,5 @@ st.title("Food Recall Tracker")
 df = pd.read_csv("recalls_app.csv")
 
 st.write("Total recalled products:", len(df))
+
+search = st.text_input("Search for a product or company")
