@@ -14,3 +14,5 @@ if search:
     st.write("Matching products:", len(results))
 
     st.dataframe(results)
+
+    results = results.sort_values("report_date", ascending=False)
