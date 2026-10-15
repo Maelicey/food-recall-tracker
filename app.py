@@ -1,3 +1,5 @@
+st.set_page_config(layout="wide")
+
 import streamlit as st
 import pandas as pd
 
@@ -20,6 +22,6 @@ if search:
     results = results.sort_values("report_date", ascending=False)
     st.write("Matching products:", len(results))
 
-    st.dataframe(results[display_columns])
+    st.dataframe(results[display_columns], hide_index=True)
 
     
