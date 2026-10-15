@@ -27,3 +27,4 @@ if search:
     st.dataframe(results[display_columns], hide_index=True)
 
     
+st.caption("Data source: FDA openFDA food enforcement reports (snapshot from October 2026). This app is not an official FDA source, and the data may not be complete or up to date. Please check the official FDA website for current recall information.")
