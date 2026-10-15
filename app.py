@@ -20,7 +20,6 @@ if search:
     results = results.sort_values("report_date", ascending=False)
     st.write("Matching products:", len(results))
 
-    st.dataframe(results)
     st.dataframe(results[display_columns])
 
     
