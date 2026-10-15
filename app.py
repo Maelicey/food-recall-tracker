@@ -3,7 +3,7 @@ import pandas as pd
 
 st.title("Food Recall Tracker")
 display_columns = ["report_date", "product_description", "recalling_firm", "reason_for_recall", "classification", "status"]
-    st.dataframe(results[display_columns])
+st.dataframe(results[display_columns])
 
 df = pd.read_csv("recalls_app.csv")
 
