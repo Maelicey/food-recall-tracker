@@ -17,7 +17,8 @@ class_choice = st.selectbox("Classification", ["All", "Class I", "Class II", "Cl
 if search:
     in_product = df["product_description"].str.contains(search, case=False, na=False)
     in_company = df["recalling_firm"].str.contains(search, case=False, na=False)
-    results = df[in_product | in_company]
+    in_reason = df["reason_for_recall"].str.contains(search, case=False, na=False)
+    results = df[in_product | in_company | in_reason]
     if class_choice != "All":
         results = results[results["classification"] == class_choice]
     results = results.sort_values("report_date", ascending=False)
