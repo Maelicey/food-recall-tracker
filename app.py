@@ -11,7 +11,7 @@ df = pd.read_csv("recalls_app.csv")
 
 st.write("Total recalled products:", len(df))
 
-search = st.text_input("Search for a product or company")
+search = st.text_input("Search for a product or company, or reason")
 class_choice = st.selectbox("Classification", ["All", "Class I", "Class II", "Class III"])
 
 if search:
