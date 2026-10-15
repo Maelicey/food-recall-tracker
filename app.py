@@ -1,7 +1,8 @@
-st.set_page_config(layout="wide")
-
 import streamlit as st
 import pandas as pd
+
+st.set_page_config(layout="wide")
+
 
 st.title("Food Recall Tracker")
 display_columns = ["report_date", "product_description", "recalling_firm", "reason_for_recall", "classification", "status"]
