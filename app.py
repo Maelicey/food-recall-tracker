@@ -43,4 +43,9 @@ products_per_category = df["reason_category"].value_counts().sort_index()
 st.bar_chart(products_per_category)
 st.caption("The chart shows the reason for recall. Categories are based on keywords in the recall reason. 'Other' means no keyword matched.")
 
+st.header("Companies with the most recalls")
+events_per_company = df.groupby("recalling_firm")["event_id"].nunique().sort_values(ascending=False).head(10)
+st.bar_chart(events_per_company)
+st.caption("The chart shows the recall events. Company names may vary (Whole Foods/ WFM). Big companies sell more products.
+
 st.caption("Data source: FDA openFDA food enforcement reports (snapshot from October 2026). This app is not an official FDA source, and the data may not be complete or up to date. Please check the official FDA website for current recall information.")
