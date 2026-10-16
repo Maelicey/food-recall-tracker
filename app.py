@@ -41,6 +41,6 @@ st.caption("The chart counts recalled products per Class.")
 st.header("Recall by Common Reasons")
 products_per_category = df["reason_category"].value_counts().sort_index()
 st.bar_chart(products_per_category)
-st.caption("The chart shows reason of category")
+st.caption("The chart shows the reason for recall. Categories are based on keywords in the recall reason. 'Other' means no keyword matched.")
 
 st.caption("Data source: FDA openFDA food enforcement reports (snapshot from October 2026). This app is not an official FDA source, and the data may not be complete or up to date. Please check the official FDA website for current recall information.")
