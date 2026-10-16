@@ -43,7 +43,7 @@ products_per_category = df["reason_category"].value_counts().sort_index()
 st.bar_chart(products_per_category)
 st.caption("The chart shows the reason for recall. Categories are based on keywords in the recall reason. 'Other' means no keyword matched.")
 
-st.header("Companies with the most recalls")
+st.header("Companies with the most recalls events")
 events_per_company = df.groupby("recalling_firm")["event_id"].nunique().sort_values(ascending=False).head(10)
 st.bar_chart(events_per_company)
 st.caption("The chart shows the recall events. Company names may vary (Whole Foods/ WFM). Big companies sell more products.")
