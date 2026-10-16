@@ -28,7 +28,15 @@ with tab1:
             results = results[results["classification"] == class_choice]
         results = results.sort_values("report_date", ascending=False)
         st.write("Matching products:", len(results))
-        st.dataframe(results[display_columns], hide_index=True)
+        nice_names = {
+            "report_date": "Report date",
+            "product_description": "Product description",
+            "recalling_firm": "Company",
+            "reason_for_recall": "Reason for recall",
+            "classification": "Class",
+            "status": "Status",
+        }
+        st.dataframe(results[display_columns].rename(columns=nice_names), hide_index=True)
 
 with tab2:
     st.header("Recalls by year")
