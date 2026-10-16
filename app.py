@@ -13,6 +13,16 @@ df["year"] = pd.to_datetime(df["report_date"]).dt.year
                             
 st.write("Total recalled products:", len(df))
 
+tab1, tab2 = st.tabs(["Search", "Analytics"])
+
+with tab1:
+  st.write("This is the search tab")
+
+with tab2:
+  st.write("This is the analytics tab")
+
+search = st.text_input(...)
+
 search = st.text_input("Search for a product or company, or reason")
 class_choice = st.selectbox("Classification", ["All", "Class I", "Class II", "Class III"])
 
