@@ -9,7 +9,7 @@ display_columns = ["report_date", "product_description", "recalling_firm", "reas
 
 df = pd.read_csv("recalls_app.csv")
 
-df["year"] = pd.to_datetime(df["report_date"].dt.year
+df["year"] = pd.to_datetime(df["report_date"]).dt.year
                             
 st.write("Total recalled products:", len(df))
 
