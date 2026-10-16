@@ -33,7 +33,7 @@ products_per_year = df["year"].value_counts().sort_index()
 st. bar_chart(products_per_year)
 st.caption("The chart counts recalled products per year. 2026 includes data up to October.")
 
-st.header("Recall Trends by Classification")
+st.header("Recall by Classification")
 products_per_class = df["classification"].value_counts().sort_index()
 st.bar_chart(products_per_class)
 st.caption("The chart counts recalled products per Class.")
