@@ -18,6 +18,8 @@ tab1, tab2 = st.tabs(["Search", "Analytics"])
 with tab1:
     search = st.text_input("Search for a product, company, or reason")
     class_choice = st.selectbox("Classification", ["All", "Class I", "Class II", "Class III"])
+    st.caption("Class I: most serious risk. Class II: temporary or reversible health risk. Class III: unlikely to cause health problems.")
+
 
     if search:
         in_product = df["product_description"].str.contains(search, case=False, na=False)
