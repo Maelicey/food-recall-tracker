@@ -1,6 +1,5 @@
 # food-recall-tracker
 
-# 🔎 Food Recall Tracker
 
 A public web app to search and explore U.S. food recalls, built on the FDA's openFDA data.
 
@@ -37,7 +36,7 @@ The FDA classifies each recall by how serious the health risk is:
 
 ## Repository files
 
-- `01_get_recall_data.ipynb`: data collection and cleaning (Python)
+- `01_get_recall_data-2.ipynb`: data collection and cleaning (Python)
 - `analysis.sql`: SQL analysis in BigQuery
 - `app.py`: Streamlit app
 - `recalls_app.csv`: app data, with reason categories
