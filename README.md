@@ -35,6 +35,13 @@ The FDA classifies each recall by how serious the health risk is:
 
 **Tools:** Python, pandas, SQL, Google BigQuery, Streamlit, GitHub
 
+## Repository files
+
+- `01_get_recall_data.ipynb`: data collection and cleaning (Python)
+- `analysis.sql`: SQL analysis in BigQuery
+- `app.py`: Streamlit app
+- `recalls_app.csv`: app data, with reason categories
+  
 ## Key findings
 
 - **Listeria** is the most common reason for Class I recalls (the most serious category), followed by **Salmonella** and **undeclared allergens**.
